@@ -1,0 +1,10 @@
+db url=databases.000webhost.com
+db username=id13121433_jobscopeindia
+db name=id13121433_jobscopeworld
+db pass=Abhishek@123
+
+$link=mysqli_connect("databases.000webhost.com","id13121433_jobscopeindia","Abhishek@123","id13121433_jobscopeworld");
+
+databases-auth.000webhost.com
+
+
