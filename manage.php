@@ -4,8 +4,7 @@
 	{
 		header("location:index.php");
 	}
-			$link=mysqli_connect("localhost","root","","jobscope")
-
+			require ('./includes/db.inc.php');
 		$q="select * from jobs where j_owner_name='".$_SESSION['unm']."'";
 		
 		$res=mysql_query($link,$q) or die ("wrong query");

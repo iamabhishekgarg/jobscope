@@ -1,4 +1,5 @@
 <?php
+require ('./includes/db.inc.php');
 	if(empty($_POST))
 	{
 		exit;
@@ -31,8 +32,8 @@
 	}
 	else
 	{
-				$link=mysqli_connect("localhost","root","","jobscope")
-
+				// $link=mysqli_connect("localhost","root","","jobscope")
+		
 		$nm=$_POST['nm'];
 		$cnm=$_POST['cnm'];
 		$addr=$_POST['addr'];

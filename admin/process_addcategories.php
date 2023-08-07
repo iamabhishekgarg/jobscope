@@ -1,4 +1,5 @@
 <?php session_start();
+require ('./includes/db.inc.php');
 if(!(isset($_SESSION['status']) && $_SESSION['unm']=='admin'))
 {
 	header("location:../index.php");
@@ -24,7 +25,7 @@ if(!empty($msg))
 }
 else
 {
-	$link=mysqli_connect("localhost","root","","jobscope")
+	// $link=mysqli_connect("localhost","root","","jobscope");
 
 	$nm=$_POST['nm'];
 	$q="insert into categories(cat_nm)values('$nm')";

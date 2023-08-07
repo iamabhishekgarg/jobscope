@@ -1,4 +1,6 @@
 <?php
+
+require ('./includes/db.inc.php');
 	if(empty($_POST))
 	{
 		exit;
@@ -19,7 +21,7 @@
 	}
 	else
 	{
-			$link = mysqli_connect("localhost","root","","jobscope") or die("Cannot Connect");
+			// $link = mysqli_connect("localhost","root","","jobscope") or die("Cannot Connect");
 
 		$nm=$_POST['nm'];
 		$email=$_POST['email'];

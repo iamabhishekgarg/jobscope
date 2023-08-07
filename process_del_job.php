@@ -1,10 +1,12 @@
 <?php
+
+require ('./includes/db.inc.php');
 	if(empty($_GET))
 	{
 		header("location:index.php");
 	}
 	
-		$link=mysqli_connect("localhost","root","","jobscope")
+		// $link=mysqli_connect("localhost","root","","jobscope")
 
 		$q="delete from jobs where j_id=".$_GET['id'];
 		

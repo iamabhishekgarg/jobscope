@@ -1,10 +1,11 @@
 <?php session_start();
+require ('./includes/db.inc.php');
 
 	if(! isset($_SESSION['status']))
 	{
 		header("location:index.php");
 	}
-		$link=mysqli_connect("localhost","root","","jobscope")
+		// $link=mysqli_connect("localhost","root","","jobscope")
 
 		$q="select * from employees where ee_id in(select a_uid from applicants where a_jid=".$_GET['id']." )";
 	

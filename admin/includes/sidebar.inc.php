@@ -11,8 +11,8 @@
 						<ul>
 						
 <?php
-$link=mysqli_connect("localhost","root","","jobscope")
-
+// $link=mysqli_connect("localhost","root","","jobscope");
+require ('./includes/db.inc.php');
 //mysql_select_db ("jobscope",$link) or die("can not select database");
 $q="select * from categories";
 $res=mysql_query($link,$q) or die("cant connect");

@@ -1,4 +1,5 @@
 <?php session_start();
+require ('./includes/db.inc.php');
 
 	if(empty($_POST))
 	{
@@ -28,8 +29,8 @@
 	}
 	else
 	{
-		$link=mysql_connect("localhost","jobscope","riddhi")or die("can not connect");
-		mysql_select_db("jobscope",$link) or die("can not select database");
+		// $link=mysql_connect("localhost","jobscope","riddhi")or die("can not connect");
+		// mysql_select_db("jobscope",$link) or die("can not select database");
 		
 		$title=$_POST['title'];
 		$cat=$_POST['cat'];

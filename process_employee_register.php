@@ -64,8 +64,9 @@
 	}
 	else
 	{
-		$link=mysqli_connect("localhost","root","","jobscope")
-
+		// $link=mysqli_connect("localhost","root","","jobscope")
+		
+	require ('./includes/db.inc.php');
 		$nm=$_POST['nm'];
 		$gender=$_POST['gender'];
 		$email=$_POST['email'];

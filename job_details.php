@@ -1,7 +1,6 @@
 <?php session_start();
-
-		$link = mysqli_connect("localhost","root","","jobscope") or die("Cannot Connect");
-		
+	require ('./includes/db.inc.php');
+	
 	$q = "select * from jobs where j_id =".$_GET['id'];
 	
 	$res = mysqli_query($link,$q) or die("Wrong Query");

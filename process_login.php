@@ -1,4 +1,5 @@
 <?php session_start();
+require ('./includes/db.inc.php');
 if(empty($_POST))
 {
 	exit;
@@ -9,8 +10,7 @@ if(empty($_POST['unm'])||empty($_POST['pwd'])||empty($_POST['cat']))
 }
 if($_POST['cat']=='employee')
 {
-
-		$link=mysqli_connect("localhost","root","","jobscope")or die("Cannot Connect");
+		// $link=mysqli_connect("localhost","root","","jobscope")or die("Cannot Connect");
 	
 	$q = "select * from employees where ee_fnm = '".$_POST['unm']."'";
 	
@@ -48,8 +48,8 @@ if($_POST['cat']=='employee')
 	if($_POST['cat']=='employer')
 {
 
-			$link = mysqli_connect("localhost","root","","jobscope") or die("Cannot Connect");
-
+			// $link = mysqli_connect("localhost","root","","jobscope") or die("Cannot Connect");
+			
 			
 	//$link = mysqlii_connect("localhost","jobscope","abhi") or die("Cannot Connect");
 	//mysqlii_select_db("jobscope",$link) or die("Cant select db");

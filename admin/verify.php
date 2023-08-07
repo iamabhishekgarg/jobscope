@@ -1,10 +1,11 @@
 <?php session_start();
+require ('./includes/db.inc.php');
 if(!(isset($_SESSION['status']) && $_SESSION['unm']=='admin'))
 {
 	header("location:../index.php");
 }
 
-	$link=mysqli_connect("localhost","root","","jobscope")
+	// $link=mysqli_connect("localhost","root","","jobscope")
 
 	$q="select * from jobs where j_active=0";
 	$res=mysql_query($link,$q);

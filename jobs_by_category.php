@@ -1,19 +1,5 @@
 <?php session_start();
-
-$servername = "localhost";
-$username = "id13121433_jobscopeindia";
-$password = "Abhishek@123";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-$link=mysqli_connect("localhost","id13121433_jobscopeindia","Abhishek@123","id13121433_jobscopeworld");
-
-		
+require('./includes/db.inc.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,15 +14,15 @@ include("includes/head.inc.php");
 	<div id="header">
 	<div id="menu">
 		<?php
-		include("includes/menu.inc.php");
-		?>
+        include("includes/menu.inc.php");
+?>
 		</div>
 		<!-- end #menu -->
 		<div id="search">
 		<?php
-		
-		include("includes/search.inc.php");
-		?>
+
+include("includes/search.inc.php");
+?>
 		</div>
 		<!-- end #search -->
 	</div>
@@ -45,8 +31,8 @@ include("includes/head.inc.php");
 <!-- end #header-wrapper -->
 <div id="logo">
 	<?php
-	include("includes/logo.inc.php");
-	?>
+    include("includes/logo.inc.php");
+?>
 	</div>
 <div id="wrapper">
 	<div id="page">
@@ -61,16 +47,20 @@ include("includes/head.inc.php");
 					<div class="entry">
 					<ul>		
 					<?php
-						while($row = mysqli_fetch_assoc($res))
-						{
-						
-							echo '
+                $q = "select * from jobs";
+				
+
+$res = mysqli_query($link, $q) or die("Wrong Query");
+
+while($row = mysqli_fetch_assoc($res)) {
+
+    echo '
 										<li>
 										<a href="job_details.php?id='.$row['j_id'].'">'.$row['j_title'].'</a>
 								';
-						}
-						
-					?>
+}
+
+?>
 					</ul>
 					</div>
 				</div>
@@ -79,8 +69,8 @@ include("includes/head.inc.php");
 			<!-- end #content -->
 			<div id="sidebar">
 			<?php
-		include("includes/sidebar.inc.php");
-		?>	
+        include("includes/sidebar.inc.php");
+?>	
 			</div>
 			<!-- end #sidebar -->
 			<div style="clear: both;">&nbsp;</div>
@@ -91,8 +81,8 @@ include("includes/head.inc.php");
 <div id="footer-bgcontent">
 	<div id="footer">
 		<?php
-		include("includes/footer.inc.php");
-		?>	
+include("includes/footer.inc.php");
+?>	
 	</div>
 </div>
 <!-- end #footer -->

@@ -51,9 +51,10 @@ include("includes/head.inc.php");
 							<br><SELECT name="cat" style="width:200px;">
 							<?php
 
-						$link=mysqli_connect("localhost","root","","jobscope")
-
+						// $link=mysqli_connect("localhost","root","","jobscope")
 	
+						require ('./includes/db.inc.php');
+		
 						$q="select * from categories";
 	
 						$res=mysql_query($link.$q) or die('wrong query');

@@ -1,4 +1,5 @@
 <?php session_start();
+require ('./includes/db.inc.php');
 if(!(isset($_SESSION['status']) && $_SESSION['unm']=='admin'))
 {
 	header("location:../index.php");
@@ -74,7 +75,7 @@ include("includes/head.inc.php");
 						<?php
 
 
-						$link=mysqli_connect("localhost","root","","jobscope")
+						// $link=mysqli_connect("localhost","root","","jobscope");
 
 						$q="select * from categories";
 	

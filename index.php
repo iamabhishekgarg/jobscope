@@ -1,6 +1,6 @@
 <?php session_start();
 
-$link=mysqli_connect("localhost","root","","jobscope")
+require ('./includes/db.inc.php');
 
 //$q="select * from jobs where j_active=1 order by j_id desc ";
 //$res=mysql_query($q,$link) or die ("can not select database");
